@@ -4,19 +4,20 @@
 let newDog = document.getElementsByClassName('input-field');
 
 // these are variables we'll need eventually
-let rer = 0;
+// let rer = 0;
 let size = '';
 
 // where we store our doggy info
 let dogArray = [];
 
 //how to add doggos to array
-function Dog(dogName, weight, date, dogFoodType, dogFoodCal){
+function Dog(dogName, weight, date, dogFoodType, dogFoodCal, rer){
   this.dogName = dogName;
   this.weight = weight;
   this.date = date;
   this.dogFoodType = dogFoodType;
   this.dogFoodCal = dogFoodCal;
+  this.rer = rer;
 
   dogArray.push(this);
 }
@@ -31,11 +32,13 @@ function Dog(dogName, weight, date, dogFoodType, dogFoodCal){
 newDog[0].addEventListener('submit',
   function (event) {
     event.preventDefault();
+    let dogName = event.target.dogName.value;
     let weight = event.target.weight.value;
     let date = parseInt(event.target.date.value);
-    let dogFoodType = parseInt(event.target.dogFoodType.value);
+    let dogFoodType = (event.target.dogFoodType.value);
     let dogFoodCal = parseInt(event.target.dogFoodCal.value);
-    let newDog = new Dog(weight, date, dogFoodType, dogFoodCal);
+    let rer = parseInt(event.target.rer.value);
+    let newDog = new Dog(dogName, weight, date, dogFoodType, dogFoodCal, rer);
     console.log(newDog);
 
     let stringifiedDog = JSON.stringify(dogArray);
