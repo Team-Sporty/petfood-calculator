@@ -32,14 +32,25 @@ function Dog(dogName, weight, date, dogFoodType, dogFoodCal, rer){
 newDog[0].addEventListener('submit',
   function (event) {
     event.preventDefault();
+    // if dogName is new dog
     let dogName = event.target.dogName.value;
-    let weight = event.target.weight.value;
-    let date = parseInt(event.target.date.value);
+    let weight = parseFloat(event.target.weight.value);
+    let date = (event.target.date.value);
     let dogFoodType = (event.target.dogFoodType.value);
     let dogFoodCal = parseInt(event.target.dogFoodCal.value);
-    let rer = parseInt(event.target.rer.value);
+    let rer = parseFloat(event.target.rer.value);
     let newDog = new Dog(dogName, weight, date, dogFoodType, dogFoodCal, rer);
     console.log(newDog);
+
+    // else dogName already exists
+    // PUSH WEIGHT TO dogArray, ADD TO END SHOULD WEIGHT BE ARRAY TO BEGIN WITH?
+    // let weight = event.target.weight.value;
+    // PUSH DATE to dogArray, ADD TO END SHOULD DATE BE ARRAY TO BEGIN WITH?
+    //let date = (event.target.date.value);
+    //let dogFoodType = (event.target.dogFoodType.value);
+    //let dogFoodCal = parseInt(event.target.dogFoodCal.value);
+    //push new rer to array
+    //let rer = parseInt(event.target.rer.value);
 
     let stringifiedDog = JSON.stringify(dogArray);
 
