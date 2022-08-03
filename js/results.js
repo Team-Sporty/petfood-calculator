@@ -1,10 +1,5 @@
 'use strict';
 
-//*** GLOBAL VARIABLES ***
-
-let dogArray = [];
-
-
 //*** LOCAL STORAGE */
 //*** STEP 3: GET DATA OUT OF LOCAL STORAGE */
 let retrievedDogData = localStorage.getItem('myDogData');
@@ -15,22 +10,24 @@ let parsedDog = JSON.parse(retrievedDogData);
 
 console.log('parsed Dog >>>', parsedDog);
 
-// ***HELPER FUNCTION*** When we have two fixed values:
-// num1 is the rer
-// num2 is the weight in kilograms
-// num3 is a variable we're using for math (may need to be declared globally)
-
 let num1 = parsedDog[0].rer;
-let num2 = parsedDog[0].weight;
-// let num3 = 0;
+let num2 = parsedDog[0].weight[parsedDog[0].weight.length-1];
+let num4 = parseFloat(parsedDog[0].dogFoodCal);
 
-function preRer(numA,numB){
-  let step2 = 70*(Math.pow(numB, .75));
-  let num3 = step2*numA;
+function calories(numA,numB){
+  let step1 = 70*(Math.pow(numB, .75));
+  let num3 = step1*numA;
   return num3;
 }
 
-// let append = document.getElementById('dog-name');
-// append.textContent = `${(preRer(num1,num2))} test`;
+// this function found at https://stackoverflow.com/questions/1026069/how-do-i-make-the-first-letter-of-a-string-uppercase-in-javascript
+function capitalizeFirstLetter(string) {
+  return string.charAt(0).toUpperCase() + string.slice(1);
+}
 
-document.getElementById('dog-name').textContent=`${(preRer(num1,num2))} test`;
+function mass(numD){
+  let step1 = (calories(num1,num2))/(numD/1000);
+  return step1;
+}
+
+document.getElementById('dog-name').textContent=`${capitalizeFirstLetter(parsedDog[0].dogName)} needs ${Math.round((calories(num1,num2)))} calories daily to promote a healthy lifestyle, which is equivalent to ${Math.round(mass(num4))} grams of ${parsedDog[0].dogFoodType}`;
