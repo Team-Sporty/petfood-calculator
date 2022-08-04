@@ -1,0 +1,89 @@
+.results-cont {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: .5vw;
+	width: 100%;
+}
+
+header {
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	height: 12vw;
+	width: 100%;
+	gap: 2.5vw;
+	padding-top: 60px;
+	background-color: #747c83;
+}
+
+h1 {
+	font-size: 7vw;
+	font-family: rift, sans-serif;
+	font-weight: 700;
+	font-style: italic;
+	color: #edb525;
+}
+
+nav {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+	gap: 12vw;
+	width: 100%;
+	padding-left: 3vw;
+	padding-right: 3vw;
+}
+
+a {
+	justify-content: center;
+	align-items: center;
+	text-decoration: none;
+	color: white;
+	font-size: 2.25vw;
+	font-family: dharma-gothic-m, sans-serif;
+	font-weight: 700;
+	font-style: normal;
+	letter-spacing: 2px;
+	padding: 5px 20px 0px 20px;
+}
+
+.results-main {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-between;
+	gap: 3vw;
+  max-width: 980px;
+}
+
+h2 {
+	font-size: 3vw;
+	font-family: goodchild-pro, sans-serif;
+	font-weight: 700;
+	font-style: normal;
+	color: #42474b
+	
+}
+p {
+	font-size: 1.25vw;
+	gap: 2vw;
+	line-height: 100%;
+	font-family: halyard-text, sans-serif;
+	text-indent: 60px;
+
+font-weight: 400;
+
+font-style: normal;
+}
+
+footer {
+	height: 6vw;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	background-color: #747c83;
+}
