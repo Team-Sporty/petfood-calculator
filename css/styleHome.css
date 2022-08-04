@@ -17,8 +17,8 @@ header {
 	flex-direction: column;
 	height: 12vw;
 	width: 100%;
-	gap: 2.5vw;
-	padding-top: 60px;
+	gap: 2.25vw;
+	padding-top: 50px;
 	background-color: #747c83;
 }
 
@@ -30,7 +30,7 @@ header {
 }
 
 h1 {
-	font-size: 7vw;
+	font-size: 7.25vw;
 	font-family: rift, sans-serif;
 	font-weight: 700;
 	font-style: italic;
@@ -91,28 +91,34 @@ hr {
   display:flex;
   justify-content: center;
   align-items: center;
-  width: 75%;
+  width: 70%;
   background-color: #D82429;
   height: 3px;
+
 }
 
 p {
 	font-size: 1.25vw;
 	gap: 2vw;
-	line-height: 100%;
+	line-height: 120%;
 	font-family: halyard-text, sans-serif;
 	text-indent: 60px;
-
-font-weight: 400;
-
-font-style: normal;
+	font-weight: 400;
+	font-style: normal;
 }
 
-.input {
+/* .input {
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
-	gap: 20px;
+	gap: 10px;
+} */
+
+.input-field {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 15px;
 }
 
 
@@ -120,6 +126,7 @@ input {
 	padding: .75vw;
 	background-color: #747c83;
 	color: whitesmoke;
+	margin-right: 1vw;
 }
 
 #dogName::placeholder {
@@ -136,12 +143,14 @@ label {
 	font-size: 1vw;
 	font-family: halyard-text, sans-serif;
 	color: #42474b;
+	padding-right: 5px;
 }
 
 select {
-	padding: 18px;
+	padding: 16.5px;
 	background-color: #747c83;
 	color: whitesmoke;
+	border: 1px solid black;
 }
 
 button {
@@ -174,9 +183,10 @@ button {
 }
 
 ul {
+	margin-top: 1.25vw;
 	display: flex;
 	flex-direction: column;
-	align-items: center;
+	align-items:center;
 	justify-content: center;
 	max-width: 70%;
 	gap: 1vw;
@@ -189,7 +199,7 @@ line-height: 150%;
 font-family: halyard-text, sans-serif;
 font-weight: 400;
 font-style: normal;
-text-indent: 25px;
+
 }
 
 footer {
