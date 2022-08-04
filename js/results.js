@@ -35,24 +35,25 @@ document.getElementById('dog-name').textContent= capitalizeFirstLetter(parsedDog
 document.getElementById('results-text').textContent=`${capitalizeFirstLetter(parsedDog[0].dogName)} needs ${Math.round((calories(num1,num2)))} calories daily to promote a healthy lifestyle, which is equivalent to ${Math.round(mass(num4))} grams of ${parsedDog[0].dogFoodType}`;
 
 // // ******CHART******
-// let canvasElem = document.getElementById('my-chart');
-// function renderChart() {
+let canvasElem = document.getElementById('my-chart');
+function renderChart() {
 
-//   let config = {
-//     type: 'line',
-//     data: {
-//       labels: parsedDog[0].date,
-//       datasets: [{
-//         label: 'My First Dataset',
-//         data: parsedDog[0].weight,
-//         fill: false,
-//         borderColor: 'rgb(75, 192, 192)',
-//         tension: 0.1
-//       }]
-//     },
-//   };
+  let config = {
+    type: 'line',
+    data: {
+      labels: parsedDog[0].date,
+      datasets: [{
+        label: 'Change in Weight Over Time',
+        data: parsedDog[0].weight,
+        fill: false,
+        borderColor: '#EDB525',
+        color: '#42474B',
+        tension: 0.1
+      }]
+    },
+  };
 
-//   new Chart(canvasElem, config);
-// }
+  new Chart(canvasElem, config);
+}
 
-// renderChart();
+renderChart();

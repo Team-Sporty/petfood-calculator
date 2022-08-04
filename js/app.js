@@ -31,7 +31,7 @@ newDog[0].addEventListener('submit',
     event.preventDefault();
     let exists = false;
     let dogIndex;
-    let dogName = event.target.dogName.value;
+    let dogName = event.target.dogName.value.toLowerCase();
     let weight = parseFloat(event.target.weight.value);
     let date = (event.target.date.value);
     let dogFoodType = (event.target.dogFoodType.value);
