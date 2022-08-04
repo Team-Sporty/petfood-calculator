@@ -85,6 +85,16 @@ h2 {
 	
 }
 
+hr {
+  border: 0;
+  clear:both;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  width: 75%;
+  background-color: #D82429;
+  height: 3px;
+}
 
 p {
 	font-size: 1.25vw;
