@@ -37,8 +37,8 @@
         <input id="dogFoodType" name="dogFoodType" type="text" placeholder="ex. Pupino Extra Chow"/>
         <label for="dogFoodCal">Dog Food Calories</label>
         <input id="dogFoodCal" name="dogFoodCal" type="number" placeholder="in kcal/kg" required/>
-        <label for="rer">RER</label>
-        <input id="rer" name="rer" type="text" placeholder="1-4" required/>
+        <label for="rer">RER Factor</label>
+        <input id="rer" name="rer" type="text" placeholder="1-5" required/>
         <label for="size"></label>
         <select name="size" id="size">
           <option value="small">Small</option>
@@ -65,10 +65,21 @@
     <section class="main-2">
       <h2>How to use this tool</h2>
       <hr>
+			<div class="rer description">
+				<p>Below are various RER values that represent dogs of different age and fitness levels. </p>
+					 <p>Enter the number that best represents your dog to ensure an accurate calculation. </p>
+			</div>
       <ul>
-        <li>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laborum, nisi? Quae incidunt doloremque eius magni, voluptatem minus, enim dolorum, in facilis quia quo mollitia tenetur consequatur neque at porro delectus!</li>
-        <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita quis aut neque recusandae labore voluptate fuga laboriosam blanditiis aperiam nulla optio id pariatur, accusamus veniam maiores enim sequi magnam sint.</li>
-        <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat deserunt dolor exercitationem quos. Quisquam incidunt enim quae ipsum sapiente repellendus dicta deserunt voluptates vel atque veniam, quo a perspiciatis quis!</li>
+
+        <li>Neutered adult	1.6 x RER</li>
+				<li>Intact adult	1.8 x RER</li>
+				<li>Inactive/obese prone	1.2-1.4 x RER</li>
+				<li>Weight loss	1.0 x RER for ideal weight</li>
+				<li>Weight gain	1.2-1.8 x RER for ideal weight</li>
+				<li>Active, working dogs	2.0-5.0 x RER</li>
+				<li>Puppy 0-4 months	3.0 x RER</li>
+				<li>Puppy 4 months to adult	2.0 x RER</li>
+
       </ul>
       <img src="" alt="">
 			<img src="" alt="">
